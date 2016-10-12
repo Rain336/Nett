@@ -1,8 +1,8 @@
-﻿namespace Nett.Parser
-{
-    using System;
-    using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
+namespace Nett.Parser
+{
     [DebuggerDisplay("{DebuggerDisplay}")]
     internal abstract class LookaheadBuffer<T>
         where T : struct

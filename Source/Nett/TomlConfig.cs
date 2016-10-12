@@ -1,10 +1,10 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Reflection;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
+namespace Nett
+{
     using static System.Diagnostics.Debug;
 
     internal enum TomlCommentLocation

@@ -1,13 +1,13 @@
-﻿namespace Nett.Coma.Tests
-{
-    using System;
-    using System.Diagnostics.CodeAnalysis;
-    using System.IO;
-    using FluentAssertions;
-    using TestData;
-    using UnitTests.Util;
-    using Xunit;
+﻿using System;
+using System.Diagnostics.CodeAnalysis;
+using System.IO;
+using FluentAssertions;
+using Nett.Coma.Tests.TestData;
+using Nett.UnitTests.Util;
+using Xunit;
 
+namespace Nett.Coma.Tests
+{
     [ExcludeFromCodeCoverage]
     public sealed class AutoSaveTests : TestsBase
     {

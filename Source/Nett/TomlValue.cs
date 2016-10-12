@@ -1,8 +1,8 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
+namespace Nett
+{
     public abstract class TomlValue : TomlObject
     {
         protected static readonly Type BoolType = typeof(bool);

@@ -1,8 +1,8 @@
-﻿namespace Nett.Parser.Matchers
-{
-    using System.Diagnostics;
-    using System.Text;
+﻿using System.Diagnostics;
+using System.Text;
 
+namespace Nett.Parser.Matchers
+{
     internal static class DateTimeMatcher
     {
         internal static Token? TryMatch(StringBuilder matchedAlready, CharBuffer cs)

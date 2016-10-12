@@ -1,10 +1,10 @@
-﻿namespace Nett.Parser
-{
-    using System;
-    using System.IO;
-    using Nett.Parser.Productions;
-    using static System.Diagnostics.Debug;
+﻿using System;
+using System.IO;
+using Nett.Parser.Productions;
+using static System.Diagnostics.Debug;
 
+namespace Nett.Parser
+{
     internal sealed class Parser
     {
         private readonly TomlConfig config;

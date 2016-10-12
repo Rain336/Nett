@@ -1,7 +1,7 @@
-﻿namespace Nett.Coma
-{
-    using Nett.Extensions;
+﻿using Nett.Extensions;
 
+namespace Nett.Coma
+{
     internal sealed class ReloadOnExternalChangeFileConfig : IPersistableConfig
     {
         private readonly FileConfig persistable;

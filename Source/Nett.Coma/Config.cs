@@ -1,9 +1,9 @@
-﻿namespace Nett.Coma
-{
-    using System;
-    using System.Linq;
-    using Nett.Extensions;
+﻿using System;
+using System.Linq;
+using Nett.Extensions;
 
+namespace Nett.Coma
+{
     public sealed class Config
     {
         private IMergeableConfig persistable;

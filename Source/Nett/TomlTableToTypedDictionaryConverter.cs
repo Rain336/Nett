@@ -1,10 +1,10 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using static System.Diagnostics.Debug;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using static System.Diagnostics.Debug;
 
+namespace Nett
+{
     public class TomlTableToTypedDictionaryConverter : ITomlConverter
     {
         private static readonly Type DictType = typeof(IDictionary);

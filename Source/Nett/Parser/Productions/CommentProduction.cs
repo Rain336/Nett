@@ -1,7 +1,7 @@
-﻿namespace Nett.Parser.Productions
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
+namespace Nett.Parser.Productions
+{
     internal static class CommentProduction
     {
         public static IList<TomlComment> TryParseAppendExpressionComments(Token lastExpressionToken, TokenBuffer tokens)

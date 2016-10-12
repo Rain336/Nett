@@ -1,11 +1,11 @@
-﻿namespace Nett.Coma
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using Nett.Coma.TomlEx;
-    using Nett.Extensions;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Nett.Coma.TomlEx;
+using Nett.Extensions;
 
+namespace Nett.Coma
+{
     internal static class TomlTableExtensions
     {
         public static void OverwriteWithValuesForLoadFrom(this TomlTable target, TomlTable from)

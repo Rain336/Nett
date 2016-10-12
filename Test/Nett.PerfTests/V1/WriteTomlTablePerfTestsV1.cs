@@ -1,8 +1,8 @@
-﻿namespace Nett.PerfTests
-{
-    using System.IO;
-    using NBench;
+﻿using System.IO;
+using NBench;
 
+namespace Nett.PerfTests
+{
     public sealed class WriteTomlTablePerfTestsV1
     {
         private const string CounterName = "WriteTomlTableV1Counter";

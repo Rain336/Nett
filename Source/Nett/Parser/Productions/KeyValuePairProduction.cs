@@ -1,7 +1,7 @@
-﻿namespace Nett.Parser.Productions
-{
-    using System;
+﻿using System;
 
+namespace Nett.Parser.Productions
+{
     internal static class KeyValuePairProduction
     {
         public static Tuple<string, TomlObject> Apply(ITomlRoot root, TokenBuffer tokens)

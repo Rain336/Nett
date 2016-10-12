@@ -1,8 +1,7 @@
-﻿namespace Nett.Parser.Matchers
-{
-    using System.Text;
-    using Util;
+﻿using System.Text;
 
+namespace Nett.Parser.Matchers
+{
     internal static class IntMatcher
     {
         internal static Token? TryMatch(CharBuffer cs)

@@ -1,9 +1,9 @@
-﻿namespace Nett.Parser.Productions
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
+namespace Nett.Parser.Productions
+{
     internal sealed class ExpressionsProduction
     {
         private enum CreateImplicitelyType

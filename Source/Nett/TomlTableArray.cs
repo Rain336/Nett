@@ -1,11 +1,11 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Linq;
-    using Extensions;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using Nett.Extensions;
 
+namespace Nett
+{
     public sealed class TomlTableArray : TomlObject
     {
         private static readonly Type ListType = typeof(IList);

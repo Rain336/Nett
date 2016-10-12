@@ -1,7 +1,7 @@
-﻿namespace Nett
-{
-    using System;
+﻿using System;
 
+namespace Nett
+{
     internal sealed class EnumToTomlConverter : ITomlConverter
     {
         public Type FromType => Types.EnumType;

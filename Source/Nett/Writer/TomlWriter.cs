@@ -1,11 +1,11 @@
-﻿namespace Nett.Writer
+﻿using System.Collections.Generic;
+using System.Linq;
+using Nett.Util;
+
+using static System.Diagnostics.Debug;
+
+namespace Nett.Writer
 {
-    using System.Collections.Generic;
-    using System.Linq;
-    using Nett.Util;
-
-    using static System.Diagnostics.Debug;
-
     internal abstract class TomlWriter
     {
         protected readonly TomlConfig config;

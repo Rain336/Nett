@@ -1,7 +1,7 @@
-﻿namespace Nett
-{
-    using System;
+﻿using System;
 
+namespace Nett
+{
     public enum CommentLocation
     {
         UseDefault,

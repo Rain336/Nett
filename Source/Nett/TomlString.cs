@@ -1,8 +1,8 @@
-﻿namespace Nett
-{
-    using System.Diagnostics;
-    using Extensions;
+﻿using System.Diagnostics;
+using Nett.Extensions;
 
+namespace Nett
+{
     [DebuggerDisplay("{Value}")]
     public sealed class TomlString : TomlValue<string>
     {

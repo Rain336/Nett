@@ -1,8 +1,8 @@
-﻿namespace Nett
-{
-    using System;
-    using Extensions;
+﻿using System;
+using Nett.Extensions;
 
+namespace Nett
+{
     public sealed class TomlTimeSpan : TomlValue<TimeSpan>
     {
         internal TomlTimeSpan(ITomlRoot root, TimeSpan value)

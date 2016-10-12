@@ -1,8 +1,8 @@
-﻿namespace Nett.Coma
-{
-    using System;
-    using Nett.Extensions;
+﻿using System;
+using Nett.Extensions;
 
+namespace Nett.Coma
+{
     internal sealed class Transaction : IMergeableConfig, IDisposable
     {
         private readonly Action<IMergeableConfig> onCloseTransactionCallback;

@@ -1,13 +1,13 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.Linq;
-    using System.Reflection;
-    using Extensions;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Reflection;
 
+namespace Nett
+{
+    using Extensions;
     using static System.Diagnostics.Debug;
 
     public static class TomlTableExtensions

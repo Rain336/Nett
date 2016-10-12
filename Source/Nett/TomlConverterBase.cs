@@ -1,7 +1,7 @@
-﻿namespace Nett
-{
-    using System;
+﻿using System;
 
+namespace Nett
+{
     internal abstract class TomlConverterBase<TFrom, TTo> : ITomlConverter<TFrom, TTo>
     {
         public static readonly Type StaticFromType = typeof(TFrom);

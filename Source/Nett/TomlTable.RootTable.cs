@@ -1,9 +1,9 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
+namespace Nett
+{
     public partial class TomlTable
     {
         internal static RootTable From<T>(TomlConfig config, T obj)

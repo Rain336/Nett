@@ -1,12 +1,12 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Reflection;
-    using LinqExtensions;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using Nett.LinqExtensions;
 
+namespace Nett
+{
     [Flags]
     public enum TomlObjectType
     {

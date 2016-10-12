@@ -1,8 +1,8 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Collections;
+﻿using System;
+using System.Collections;
 
+namespace Nett
+{
     internal static class Types
     {
         public static readonly Type EnumType = typeof(Enum);

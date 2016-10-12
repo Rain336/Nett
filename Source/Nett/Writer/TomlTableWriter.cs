@@ -1,9 +1,9 @@
-﻿namespace Nett.Writer
-{
-    using System.Collections.Generic;
-    using Nett.Util;
-    using static System.Diagnostics.Debug;
+﻿using System.Collections.Generic;
+using Nett.Util;
+using static System.Diagnostics.Debug;
 
+namespace Nett.Writer
+{
     internal sealed partial class TomlTableWriter : TomlWriter
     {
         public TomlTableWriter(FormattingStreamWriter writer, TomlConfig config)

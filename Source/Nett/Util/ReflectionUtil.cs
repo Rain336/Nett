@@ -1,11 +1,11 @@
-﻿namespace Nett.Util
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Linq.Expressions;
-    using System.Reflection;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
 
+namespace Nett.Util
+{
     internal static class ReflectionUtil
     {
         public static PropertyInfo GetPropertyInfo<TSource, TProperty>(Expression<Func<TSource, TProperty>> propertyLambda)

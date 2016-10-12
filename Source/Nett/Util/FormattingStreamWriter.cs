@@ -1,9 +1,9 @@
-﻿namespace Nett.Util
-{
-    using System;
-    using System.Diagnostics;
-    using System.IO;
+﻿using System;
+using System.Diagnostics;
+using System.IO;
 
+namespace Nett.Util
+{
     internal sealed class FormattingStreamWriter : StreamWriter
     {
         private readonly IFormatProvider formatProvider;

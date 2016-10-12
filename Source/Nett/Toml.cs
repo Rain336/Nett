@@ -1,12 +1,12 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Globalization;
-    using System.IO;
-    using System.Text;
-    using Nett.Util;
-    using Writer;
+﻿using System;
+using System.Globalization;
+using System.IO;
+using System.Text;
+using Nett.Util;
+using Nett.Writer;
 
+namespace Nett
+{
     public static class Toml
     {
         public const string FileExtension = ".toml";

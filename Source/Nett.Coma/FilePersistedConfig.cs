@@ -1,9 +1,9 @@
-﻿namespace Nett.Coma
-{
-    using System.IO;
-    using System.Security.Cryptography;
-    using Nett.Extensions;
+﻿using System.IO;
+using System.Security.Cryptography;
+using Nett.Extensions;
 
+namespace Nett.Coma
+{
     internal sealed class FileConfig : IPersistableConfig
     {
         private readonly FileConfigSource source;

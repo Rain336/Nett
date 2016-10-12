@@ -1,7 +1,7 @@
-﻿namespace Nett.Parser
-{
-    using System;
+﻿using System;
 
+namespace Nett.Parser
+{
     internal sealed class TokenBuffer : LookaheadBuffer<Token>
     {
         private bool autoThrowAwayNewlines = false;

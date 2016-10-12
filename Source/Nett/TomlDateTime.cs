@@ -1,10 +1,10 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Diagnostics;
-    using System.Globalization;
-    using Extensions;
+﻿using System;
+using System.Diagnostics;
+using System.Globalization;
+using Nett.Extensions;
 
+namespace Nett
+{
     public sealed class TomlDateTime : TomlValue<DateTimeOffset>
     {
         private static readonly string[] ParseFormats = new string[]

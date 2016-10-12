@@ -1,10 +1,10 @@
-﻿namespace Nett.Parser
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
+namespace Nett.Parser
+{
     internal sealed class CharBuffer : LookaheadBuffer<char>
     {
         private static readonly char[] WhitspaceCharSet =

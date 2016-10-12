@@ -1,9 +1,9 @@
-﻿namespace Nett.Parser.Matchers
-{
-    using System;
-    using System.Linq;
-    using System.Text;
+﻿using System;
+using System.Linq;
+using System.Text;
 
+namespace Nett.Parser.Matchers
+{
     internal static class MultilineLiteralStringMatcher
     {
         private const string StringTag = "'''";

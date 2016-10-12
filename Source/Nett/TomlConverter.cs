@@ -1,7 +1,7 @@
-﻿namespace Nett
-{
-    using System;
+﻿using System;
 
+namespace Nett
+{
     internal sealed class TomlConverter<TFrom, TTo> : TomlConverterBase<TFrom, TTo>
     {
         private readonly Func<ITomlRoot, TFrom, TTo> convert;

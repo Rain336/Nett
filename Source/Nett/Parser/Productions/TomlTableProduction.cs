@@ -1,7 +1,7 @@
-﻿namespace Nett.Parser.Productions
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
+namespace Nett.Parser.Productions
+{
     internal static class TomlTableProduction
     {
         public static IList<string> Apply(TokenBuffer tokens)

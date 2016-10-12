@@ -1,9 +1,9 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 
+namespace Nett
+{
     internal sealed class TomlTableToDictionaryConverter : ITomlConverter
     {
         private static readonly Type DictType = typeof(Dictionary<string, object>);

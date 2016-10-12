@@ -1,8 +1,8 @@
-﻿namespace Nett.Coma
-{
-    using System;
-    using Nett.Extensions;
+﻿using System;
+using Nett.Extensions;
 
+namespace Nett.Coma
+{
     internal sealed class TomlSource : TomlObject
     {
         public TomlSource(ITomlRoot root, IConfigSource source)

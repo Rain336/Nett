@@ -1,11 +1,11 @@
-﻿namespace Nett.Coma.Tests.Functional
-{
-    using System;
-    using System.Diagnostics.CodeAnalysis;
-    using FluentAssertions;
-    using Nett.UnitTests.Util;
-    using TestData;
+﻿using System;
+using System.Diagnostics.CodeAnalysis;
+using FluentAssertions;
+using Nett.UnitTests.Util;
+using Nett.Coma.Tests.TestData;
 
+namespace Nett.Coma.Tests.Functional
+{
     [ExcludeFromCodeCoverage]
     public sealed class TransactionTests
     {

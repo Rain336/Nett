@@ -1,7 +1,7 @@
-﻿namespace Nett.Extensions
-{
-    using System;
+﻿using System;
 
+namespace Nett.Extensions
+{
     internal static class GenericExtensions
     {
         public static T CheckNotNull<T>(this T toCheck, string argName)

@@ -1,10 +1,10 @@
-﻿namespace Nett.Writer
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using Util;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Nett.Util;
 
+namespace Nett.Writer
+{
     internal sealed partial class TomlTableWriter
     {
         private sealed class TomlInlineTableWriter : TomlWriter

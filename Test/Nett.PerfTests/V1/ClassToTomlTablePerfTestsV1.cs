@@ -1,7 +1,7 @@
-﻿namespace Nett.PerfTests
-{
-    using NBench;
+﻿using NBench;
 
+namespace Nett.PerfTests
+{
     public sealed class ClassToTomlTablePerfTestsV1
     {
         private const string CounterName = "ClrToTomlTable";

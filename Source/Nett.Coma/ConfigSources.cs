@@ -1,10 +1,10 @@
-﻿namespace Nett.Coma
-{
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.Linq;
-    using Nett.Extensions;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using Nett.Extensions;
 
+namespace Nett.Coma
+{
     public interface IConfigSource
     {
         string Alias { get; }

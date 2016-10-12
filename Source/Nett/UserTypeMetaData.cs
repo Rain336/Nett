@@ -1,12 +1,12 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Collections.Concurrent;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Reflection;
-    using Util;
+﻿using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using Nett.Util;
 
+namespace Nett
+{
     internal static class UserTypeMetaData
     {
         private static readonly ConcurrentDictionary<Type, MetaDataInfo> MetaData = new ConcurrentDictionary<Type, MetaDataInfo>();

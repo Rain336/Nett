@@ -1,9 +1,9 @@
-﻿namespace Nett.LinqExtensions
-{
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
+namespace Nett.LinqExtensions
+{
     internal static class EnumerableExtensions
     {
         public static Type GetElementType(this IEnumerable enumerable)

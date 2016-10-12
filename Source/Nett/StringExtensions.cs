@@ -1,12 +1,11 @@
-﻿namespace Nett
-{
-    using System;
-    using System.Globalization;
-    using System.IO;
-    using System.Text;
-    using System.Text.RegularExpressions;
-    using Nett.Parser;
+﻿using System.Globalization;
+using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+using Nett.Parser;
 
+namespace Nett
+{
     internal static class StringExtensions
     {
         private static readonly int RegexOffset = @"\u".Length;

@@ -1,8 +1,8 @@
-﻿namespace Nett.Parser
-{
-    using System.Diagnostics;
-    using System.Text;
+﻿using System.Diagnostics;
+using System.Text;
 
+namespace Nett.Parser
+{
     internal enum TokenType
     {
         Unknown,

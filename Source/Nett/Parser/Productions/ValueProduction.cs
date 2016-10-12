@@ -1,11 +1,11 @@
-﻿namespace Nett.Parser.Productions
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Diagnostics;
-    using System.Globalization;
-    using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using System.Linq;
 
+namespace Nett.Parser.Productions
+{
     internal static class ValueProduction
     {
         private static readonly char[] WhitspaceCharSet =

@@ -1,7 +1,7 @@
-﻿namespace Nett.Parser.Matchers
-{
-    using System.Text;
+﻿using System.Text;
 
+namespace Nett.Parser.Matchers
+{
     /// <summary>
     /// Note this doesn't match the all bare keys e.g. '1234'. So all keys are only recognized at the parser level.
     /// </summary>

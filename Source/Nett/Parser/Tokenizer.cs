@@ -1,9 +1,9 @@
-﻿namespace Nett.Parser
-{
-    using System.IO;
-    using System.Text;
-    using Nett.Parser.Matchers;
+﻿using System.IO;
+using System.Text;
+using Nett.Parser.Matchers;
 
+namespace Nett.Parser
+{
     internal sealed class Tokenizer
     {
         private const int SBS = 256;

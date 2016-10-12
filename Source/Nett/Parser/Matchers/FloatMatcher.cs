@@ -1,8 +1,8 @@
-﻿namespace Nett.Parser.Matchers
-{
-    using System;
-    using System.Text;
+﻿using System;
+using System.Text;
 
+namespace Nett.Parser.Matchers
+{
     internal static class FloatMatcher
     {
         internal static Token? Match(StringBuilder beforeFraction, CharBuffer cs)

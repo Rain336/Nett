@@ -1,8 +1,8 @@
-﻿namespace Nett.Extensions
-{
-    using System;
-    using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
+namespace Nett.Extensions
+{
     internal static class DictionaryExtensions
     {
         public static TValue AddIfNeeded<TKey, TValue>(this IDictionary<TKey, TValue> target, TKey key, TValue def)

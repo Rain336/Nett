@@ -1,10 +1,10 @@
-﻿namespace Nett.Coma
-{
-    using System;
-    using System.Linq.Expressions;
-    using Extensions;
-    using Nett.Extensions;
+﻿using System;
+using System.Linq.Expressions;
+using Nett.Coma.Extensions;
+using Nett.Extensions;
 
+namespace Nett.Coma
+{
     public sealed class Config<T>
         where T : class
     {
