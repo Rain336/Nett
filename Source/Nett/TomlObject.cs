@@ -43,8 +43,6 @@ namespace Nett
 
         public abstract object Get(Type t);
 
-        public abstract void Visit(ITomlObjectVisitor visitor);
-
         internal static TomlObject CreateFrom(ITomlRoot root, object val, PropertyInfo pi)
         {
             var t = val.GetType();

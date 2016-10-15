@@ -85,11 +85,6 @@ namespace Nett
 
         public TomlTable Last() => this.items[this.items.Count - 1];
 
-        public override void Visit(ITomlObjectVisitor visitor)
-        {
-            visitor.Visit(this);
-        }
-
         internal override TomlObject WithRoot(ITomlRoot root)
         {
             throw new NotImplementedException();

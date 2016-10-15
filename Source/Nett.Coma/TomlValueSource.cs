@@ -21,11 +21,6 @@ namespace Nett.Coma
 
         public override object Get(Type t) => this.Value;
 
-        public override void Visit(ITomlObjectVisitor visitor)
-        {
-            throw new NotImplementedException();
-        }
-
         internal override TomlObject WithRoot(ITomlRoot root)
         {
             root.CheckNotNull(nameof(root));

@@ -19,7 +19,7 @@ namespace Nett.TestDecoder
                 var t = Toml.ReadString(content);
                 var dict = t.ToDictionary();
                 var conv = new ToJsonConverter();
-                var json = conv.Convert(t);
+                var json = ToJsonConverter.Convert(t);
                 writer.Write(json);
 
                 Console.WriteLine(json);

@@ -23,11 +23,6 @@ namespace Nett
 
         public override string ToString() => this.Value.ToString("yyyy-MM-ddTHH:mm:ss.FFFFFFK");
 
-        public override void Visit(ITomlObjectVisitor visitor)
-        {
-            visitor.Visit(this);
-        }
-
         internal static TomlDateTime Parse(ITomlRoot root, string s)
         {
             Debug.Assert(s != null);

@@ -59,7 +59,6 @@
     <Compile Include="Extensions\DictionaryExtensions.cs" />
     <Compile Include="Extensions\GenericExtensions.cs" />
     <Compile Include="ITomlConverter.cs" />
-    <Compile Include="ITomlObjectVisitor.cs" />
     <Compile Include="IMetaDataStore.cs" />
     <Compile Include="Parser\FilePosition.cs" />
     <Compile Include="Parser\Matchers\BareKeyMatcher.cs" />

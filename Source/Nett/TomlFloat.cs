@@ -13,11 +13,6 @@ namespace Nett
 
         public override TomlObjectType TomlType => TomlObjectType.Float;
 
-        public override void Visit(ITomlObjectVisitor visitor)
-        {
-            visitor.Visit(this);
-        }
-
         internal override TomlValue ValueWithRoot(ITomlRoot root) => this.FloatWithRoot(root);
 
         internal override TomlObject WithRoot(ITomlRoot root) => this.FloatWithRoot(root);

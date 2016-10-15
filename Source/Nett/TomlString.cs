@@ -27,11 +27,6 @@ namespace Nett
 
         public override TomlObjectType TomlType => TomlObjectType.String;
 
-        public override void Visit(ITomlObjectVisitor visitor)
-        {
-            visitor.Visit(this);
-        }
-
         internal override TomlValue ValueWithRoot(ITomlRoot root) => this.StringWithRoot(root);
 
         internal override TomlObject WithRoot(ITomlRoot root) => this.StringWithRoot(root);

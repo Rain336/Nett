@@ -68,11 +68,6 @@ namespace Nett
 
         public IEnumerable<T> To<T>(TomlConfig config) => this.Value.Select((to) => to.Get<T>());
 
-        public override void Visit(ITomlObjectVisitor visitor)
-        {
-            visitor.Visit(this);
-        }
-
         internal override TomlObject WithRoot(ITomlRoot root) => this.ArrayWithRoot(root);
 
         internal override TomlValue ValueWithRoot(ITomlRoot root) => this.ArrayWithRoot(root);

@@ -191,11 +191,7 @@ namespace Nett
             return this.rows.Remove(item.Key);
         }
 
-        public Dictionary<string, object> ToDictionary()
-        {
-            var converter = new ConvertTomlTableToDictionaryConversionVisitor();
-            return converter.Convert(this);
-        }
+        public Dictionary<string, object> ToDictionary() => TomlTableToDictionaryConverter.Convert(this);
 
         public TomlObject TryGetValue(string key)
         {
@@ -205,11 +201,6 @@ namespace Nett
         }
 
         public bool TryGetValue(string key, out TomlObject value) => this.rows.TryGetValue(key, out value);
-
-        public override void Visit(ITomlObjectVisitor visitor)
-        {
-            visitor.Visit(this);
-        }
 
         internal static TomlTable CreateFromClass<T>(ITomlRoot root, T obj, TableTypes tableType = TableTypes.Default)
             where T : class
