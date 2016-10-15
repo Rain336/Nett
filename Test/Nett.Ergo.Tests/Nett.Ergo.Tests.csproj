@@ -30,6 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentAssertions, Version=4.6.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\..\Solutions\Nett\packages\FluentAssertions.4.6.1\lib\net45\FluentAssertions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.6.1.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\..\Solutions\Nett\packages\FluentAssertions.4.6.1\lib\net45\FluentAssertions.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NSubstitute, Version=1.10.0.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
+      <HintPath>..\..\Solutions\Nett\packages\NSubstitute.1.10.0.0\lib\net45\NSubstitute.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,10 +68,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Functional\CreateProxyTests.cs" />
+    <Compile Include="Functional\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Source\Nett.Coma\Nett.Coma.csproj">
+      <Project>{A453AF50-8154-4766-84DD-9DB71E38BE0C}</Project>
+      <Name>Nett.Coma</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\Nett.Ergo\Nett.Ergo.csproj">
+      <Project>{067f2e50-40bf-46bc-a9f4-36df6e111388}</Project>
+      <Name>Nett.Ergo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Source\Nett\Nett.csproj">
+      <Project>{11e1bd88-fab6-407d-b3ef-42a291d4aa14}</Project>
+      <Name>Nett</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Nett.UnitTests.Util\Nett.UnitTests.Util.csproj">
+      <Project>{43F48E90-2FA1-4DD7-A4CF-9EB6DB078A76}</Project>
+      <Name>Nett.UnitTests.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

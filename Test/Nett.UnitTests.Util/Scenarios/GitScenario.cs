@@ -96,7 +96,7 @@ EMail = ""test@user.com""";
             this.RepoFile.Dispose();
         }
 
-        public sealed class GitConfig
+        public class GitConfig
         {
             public const string Extension = ".config";
 
