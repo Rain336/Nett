@@ -15,7 +15,8 @@ namespace Nett.Ergo
             where T : class
         {
             var configInterceptor = new ConfigInterceptor<T>(config);
-            var proxy = generator.CreateClassProxy<T>(configInterceptor);
+            var options = new ProxyGenerationOptions() { Hook = new ConfigProxyGenerationHook() };
+            var proxy = generator.CreateClassProxy<T>(options, configInterceptor);
             return proxy;
         }
     }

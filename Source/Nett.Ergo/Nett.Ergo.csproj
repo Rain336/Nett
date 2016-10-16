@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigInterceptor.cs" />
+    <Compile Include="ConfigProxyGenerationHook.cs" />
     <Compile Include="ErgoConfigExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

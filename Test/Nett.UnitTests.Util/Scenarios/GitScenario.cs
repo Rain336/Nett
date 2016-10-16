@@ -100,8 +100,8 @@ EMail = ""test@user.com""";
         {
             public const string Extension = ".config";
 
-            public CoreConfig Core { get; set; } = new CoreConfig();
-            public UserConfig User { get; set; } = new UserConfig();
+            public virtual CoreConfig Core { get; set; } = new CoreConfig();
+            public virtual UserConfig User { get; set; } = new UserConfig();
 
             public override bool Equals(object obj)
             {

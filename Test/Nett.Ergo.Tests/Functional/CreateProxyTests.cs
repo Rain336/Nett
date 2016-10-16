@@ -27,5 +27,21 @@ namespace Nett.Ergo.Tests.Functional
                 cfg.Should().NotBeNull();
             }
         }
+
+        [Fact]
+        public void B()
+        {
+            using (var scenario = GitScenario.Setup(nameof(A)))
+            {
+                // Arrange
+                var cfg = scenario.CreateMergedFromDefaults();
+
+                // Act
+                GitScenario.GitConfig proxy = cfg.CreateErgoProxy();
+
+                // Assert
+                proxy.User.EMail.Should().Be("");
+            }
+        }
     }
 }
