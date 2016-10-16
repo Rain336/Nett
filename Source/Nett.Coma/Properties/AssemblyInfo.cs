@@ -37,3 +37,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyInformationalVersion("0.6.2")]
 [assembly: InternalsVisibleTo("Nett.Coma.Tests.Internal")]
 [assembly: InternalsVisibleTo("DynamicProxyGenAssembly2")]
+[assembly: InternalsVisibleTo("Nett.Ergo")]
