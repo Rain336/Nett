@@ -15,7 +15,7 @@ namespace Nett.Ergo.Tests.Functional
             using (var scenario = SingleManagedScenario.Setup(nameof(Save_WhenIsSettingOnRootLevel_ThatSettingGetsSaved)))
             {
                 // Arrange
-                const int newValue = 2;
+                const int newValue = SingleManagedScenario.IntSettingDefaultValue + 1;
                 var ep = scenario.Cofiguration.CreateErgoProxy();
 
                 // Act

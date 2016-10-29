@@ -46,7 +46,7 @@ namespace Nett.Ergo
                 }
                 else if (IsGetter(invocation))
                 {
-
+                    this.HandleGetter(invocation);
                 }
             }
         }
@@ -60,9 +60,12 @@ namespace Nett.Ergo
             this.config.Untyped.Set(path, invocation.Arguments[0]);
         }
 
-        private void HandleGetter(IInterceptor invocation)
+        private void HandleGetter(IInvocation invocation)
         {
-
+            var propertyName = GetPropertyName(invocation);
+            var path = this.parent.WithKeyAdded(propertyName);
+            var got = this.config.Untyped.GetFromPath(path);
+            invocation.ReturnValue = got.Get(invocation.Method.ReturnType);
         }
 
         private bool IsSetter(IInvocation invocation) => invocation.Method.Name.StartsWith("set_", StringComparison.OrdinalIgnoreCase);

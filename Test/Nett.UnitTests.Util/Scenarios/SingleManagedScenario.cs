@@ -5,6 +5,8 @@ namespace Nett.UnitTests.Util.Scenarios
 {
     public sealed class SingleManagedScenario : IDisposable
     {
+        public const int IntSettingDefaultValue = 1;
+
         public const string DefaultFileContent = @"
 IntSetting = 1
 ";
