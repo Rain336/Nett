@@ -10,6 +10,8 @@ namespace Nett.Coma
     {
         private readonly Config config;
 
+        internal Config Untyped => this.config;
+
         internal Config(IMergeableConfig persistable)
         {
             this.config = new Config(persistable);
