@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Functional\CreateProxyTests.cs" />
+    <Compile Include="Functional\SaveConfigTests.cs" />
     <Compile Include="Functional\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

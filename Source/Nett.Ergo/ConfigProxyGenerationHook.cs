@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
 using Castle.DynamicProxy;
 
 namespace Nett.Ergo
@@ -15,7 +12,7 @@ namespace Nett.Ergo
 
         public void NonProxyableMemberNotification(Type type, MemberInfo memberInfo)
         {
-            throw new NotImplementedException();
+            throw new Exception($"Member '{memberInfo.DeclaringType.Name}.{memberInfo.Name}' cannot be proxied.");
         }
 
         public bool ShouldInterceptMethod(Type type, MethodInfo methodInfo)

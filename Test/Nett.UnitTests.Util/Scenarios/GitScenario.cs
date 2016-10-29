@@ -112,13 +112,13 @@ EMail = ""test@user.com""";
 
             public override int GetHashCode() => base.GetHashCode();
 
-            public sealed class CoreConfig
+            public class CoreConfig
             {
-                public bool AutoClrf { get; set; } = true;
-                public bool Bare { get; set; } = false;
-                public HelpConfig Help { get; set; } = new HelpConfig();
-                public bool IgnoreCase { get; set; } = false;
-                public bool Symlinks { get; set; } = false;
+                public virtual bool AutoClrf { get; set; } = true;
+                public virtual bool Bare { get; set; } = false;
+                public virtual HelpConfig Help { get; set; } = new HelpConfig();
+                public virtual bool IgnoreCase { get; set; } = false;
+                public virtual bool Symlinks { get; set; } = false;
 
                 public override bool Equals(object obj)
                 {
@@ -134,7 +134,7 @@ EMail = ""test@user.com""";
                 public override int GetHashCode() => base.GetHashCode();
             }
 
-            public sealed class HelpConfig
+            public class HelpConfig
             {
                 public enum HelpFormat
                 {
@@ -143,7 +143,7 @@ EMail = ""test@user.com""";
                     Web,
                 }
 
-                public HelpFormat Format { get; set; } = HelpFormat.Man;
+                public virtual HelpFormat Format { get; set; } = HelpFormat.Man;
 
                 public override bool Equals(object obj)
                 {
@@ -154,10 +154,10 @@ EMail = ""test@user.com""";
                 public override int GetHashCode() => base.GetHashCode();
             }
 
-            public sealed class UserConfig
+            public class UserConfig
             {
-                public string EMail { get; set; } = null;
-                public string Name { get; set; } = null;
+                public virtual string EMail { get; set; } = null;
+                public virtual string Name { get; set; } = null;
 
                 public override bool Equals(object obj)
                 {
