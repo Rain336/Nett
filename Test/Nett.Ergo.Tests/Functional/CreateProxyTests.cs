@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentAssertions;
+﻿using FluentAssertions;
 using Nett.Coma.Tests.TestData;
-using NSubstitute;
 using Xunit;
 
 namespace Nett.Ergo.Tests.Functional
@@ -13,9 +7,9 @@ namespace Nett.Ergo.Tests.Functional
     public class CreateProxyTests
     {
         [Fact]
-        public void A()
+        public void CreateProxy_ReturnsAProxy()
         {
-            using (var scenario = GitScenario.Setup(nameof(A)))
+            using (var scenario = GitScenario.Setup(nameof(CreateProxy_ReturnsAProxy)))
             {
                 // Arrange
                 var cfg = scenario.CreateMergedFromDefaults();
@@ -29,9 +23,9 @@ namespace Nett.Ergo.Tests.Functional
         }
 
         [Fact]
-        public void B()
+        public void CreatedProxy_EMail_ReturnsCorrectEMail()
         {
-            using (var scenario = GitScenario.Setup(nameof(A)))
+            using (var scenario = GitScenario.Setup(nameof(CreatedProxy_EMail_ReturnsCorrectEMail)))
             {
                 // Arrange
                 var cfg = scenario.CreateMergedFromDefaults();
@@ -40,7 +34,7 @@ namespace Nett.Ergo.Tests.Functional
                 GitScenario.GitConfig proxy = cfg.CreateErgoProxy();
 
                 // Assert
-                proxy.User.EMail.Should().Be("");
+                proxy.User.EMail.Should().Be(GitScenario.DefaultEMail);
             }
         }
     }

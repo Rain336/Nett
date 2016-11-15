@@ -32,6 +32,8 @@ EMail = ""test@user.com""";
         public static readonly GitConfig MergedDefault;
         private static readonly string MergedDefaultContent;
 
+        public const string DefaultEMail = "test@user.com";
+
         static GitScenario()
         {
             MergedDefaultContent = RepoDefaultContent + Environment.NewLine
