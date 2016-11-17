@@ -46,7 +46,9 @@
     <Compile Include="ConfigInterceptor.cs" />
     <Compile Include="ConfigProxyGenerationHook.cs" />
     <Compile Include="ErgoConfigExtensions.cs" />
+    <Compile Include="IConfigSourceExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SourceContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Nett.Coma\Nett.Coma.csproj">

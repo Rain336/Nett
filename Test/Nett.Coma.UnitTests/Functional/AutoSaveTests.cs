@@ -5,6 +5,7 @@ using FluentAssertions;
 using Nett.Coma.Tests.TestData;
 using Nett.UnitTests.Util;
 using Xunit;
+using System.Linq;
 
 namespace Nett.Coma.Tests
 {
@@ -124,6 +125,23 @@ namespace Nett.Coma.Tests
                 tbl.Get<TomlTable>("Core")
                     .Get<TomlTable>("Help")
                     .Get<GitScenario.GitConfig.HelpConfig.HelpFormat>("Format").Should().Be(updated);
+            }
+        }
+
+        [FFact("Save setting", "When parent key doesn't exist in the source yet creates the key itself")]
+        public void SaveSetting_WhenParentKeyDoesntExistYetInSource_ParentTableWillBeAutoCreated()
+        {
+            using (var scenario = GitScenario.Setup(nameof(SaveSetting_WhenParentKeyDoesntExistYetInSource_ParentTableWillBeAutoCreated)))
+            {
+                // Arrange
+                var cfg = scenario.CreateMergedFromDefaults();
+
+                // Act
+                cfg.Set(c => c.User.EMail, "new@email.at", scenario.SystemFileSource);
+
+                // Assert
+                var tbl = Toml.ReadFile(scenario.SystemFile);
+                tbl.Rows.Count().Should().Be(2);
             }
         }
     }

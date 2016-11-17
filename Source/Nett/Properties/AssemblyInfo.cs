@@ -33,4 +33,5 @@ using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("Nett.UnitTests.Internal")]
 [assembly: InternalsVisibleTo("Nett.Coma")]
+[assembly: InternalsVisibleTo("Nett.Ergo")]
 [assembly: InternalsVisibleTo("Nett.PerfTests")]

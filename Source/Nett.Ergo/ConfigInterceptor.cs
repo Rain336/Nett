@@ -57,7 +57,15 @@ namespace Nett.Ergo
         {
             var propertyName = GetPropertyName(invocation);
             var path = this.parent.WithKeyAdded(propertyName);
-            this.config.Untyped.Set(path, invocation.Arguments[0]);
+
+            if (SourceContext.IsSourceActive(out IConfigSource source))
+            {
+                this.config.Untyped.Set(path, invocation.Arguments, source);
+            }
+            else
+            {
+                this.config.Untyped.Set(path, invocation.Arguments[0]);
+            }
         }
 
         private void HandleGetter(IInvocation invocation)

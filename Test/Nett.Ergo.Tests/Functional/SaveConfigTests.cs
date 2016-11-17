@@ -2,12 +2,14 @@
 using Nett.Coma.Tests.TestData;
 using Nett.UnitTests.Util;
 using Nett.UnitTests.Util.Scenarios;
+using System.Linq;
 
 namespace Nett.Ergo.Tests.Functional
 {
     public class SaveConfigTests
     {
         private const string Func = "Save Ergo config";
+        private const string FuncSaveSetting = "Save setting";
 
         [FFact(Func, "When saved on root level, that setting will get saved")]
         public void Save_WhenIsSettingOnRootLevel_ThatSettingGetsSaved()
@@ -42,6 +44,26 @@ namespace Nett.Ergo.Tests.Functional
                 // Assert
                 var onDisk = coma.Get(c => c.Core.AutoClrf);
                 onDisk.Should().Be(updated);
+            }
+        }
+
+        [FFact(FuncSaveSetting, "Saves it in the correct file.")]
+        public void Save_WhenScopeIsSpecified_SettingIsSavedToThatScope()
+        {
+            using (var scenario = GitScenario.Setup(nameof(Save_WhenScopeIsSpecified_SettingIsSavedToThatScope)))
+            {
+                // Arrange
+                var cfg = scenario.CreateMergedFromDefaults().CreateErgoProxy();
+
+                // Act
+                using (scenario.SystemFileSource.MakeCurrent())
+                {
+                    cfg.User.EMail = "new@email.at";
+                }
+
+                // Assert
+                var tbl = Toml.ReadFile(scenario.SystemFile);
+                tbl.Rows.Count().Should().Be(2);
             }
         }
     }
