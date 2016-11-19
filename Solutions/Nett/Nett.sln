@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.25802.0
+VisualStudioVersion = 15.0.25914.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nett.UnitTests", "..\..\Test\Nett.UnitTests\Nett.UnitTests.csproj", "{C7FDD1D2-70F8-4808-8F39-27267C159CF3}"
 EndProject
@@ -33,6 +33,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nett.Coma.Tests", "..\..\Test\Nett.Coma.UnitTests\Nett.Coma.Tests.csproj", "{973EB2FA-C2BA-4395-BB42-1632A602C5CB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nett.Coma.Tests.Internal", "..\..\Test\Nett.Coma.Tests.Internal\Nett.Coma.Tests.Internal.csproj", "{7AA9DF26-72E2-495F-B779-2C9D55AA9C44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NettDNS", "..\..\Source\Nett\NettDNS.csproj", "{B4B6928C-DCF4-41A3-BCAA-9BF2A09A406E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +78,10 @@ Global
 		{7AA9DF26-72E2-495F-B779-2C9D55AA9C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AA9DF26-72E2-495F-B779-2C9D55AA9C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AA9DF26-72E2-495F-B779-2C9D55AA9C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4B6928C-DCF4-41A3-BCAA-9BF2A09A406E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4B6928C-DCF4-41A3-BCAA-9BF2A09A406E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4B6928C-DCF4-41A3-BCAA-9BF2A09A406E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4B6928C-DCF4-41A3-BCAA-9BF2A09A406E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
