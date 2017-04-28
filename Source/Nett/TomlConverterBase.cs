@@ -1,6 +1,7 @@
 ﻿namespace Nett
 {
     using System;
+    using System.Reflection;
 
     internal abstract class TomlConverterBase<TFrom, TTo> : ITomlConverter<TFrom, TTo>
     {
@@ -16,7 +17,7 @@
 
         public bool CanConvertToToml() => CanConvertToTomlType;
 
-        public object Convert(ITomlRoot root, object o, Type targetType) => this.Convert(root, (TFrom)o, targetType);
+        public object Convert(ITomlRoot root, object o, Type targetType) => this.Convert(root, (TFrom) o, targetType);
 
         public abstract TTo Convert(ITomlRoot root, TFrom from, Type targetType);
     }

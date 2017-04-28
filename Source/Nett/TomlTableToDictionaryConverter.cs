@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Diagnostics;
+    using System.Reflection;
 
     internal sealed class TomlTableToDictionaryConverter : ITomlConverter
     {
@@ -19,7 +20,7 @@
         public object Convert(ITomlRoot root, object value, Type targetType)
         {
             var converter = new ConvertTomlTableToDictionaryConversionVisitor();
-            return converter.Convert((TomlTable)value);
+            return converter.Convert((TomlTable) value);
         }
     }
 
@@ -39,7 +40,8 @@
         public Dictionary<string, object> Convert(TomlTable table)
         {
 #if DEBUG
-            Debug.Assert(!this.invokedConvert, "Do not reuse the TomlTable Converter. The converter can only be used once. Create a new converter instead.");
+            Debug.Assert(!this.invokedConvert,
+                "Do not reuse the TomlTable Converter. The converter can only be used once. Create a new converter instead.");
             this.invokedConvert = true;
 #endif
             foreach (var r in table.Rows)

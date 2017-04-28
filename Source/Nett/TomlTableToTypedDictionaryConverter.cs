@@ -3,6 +3,7 @@
     using System;
     using System.Collections;
     using System.Collections.Generic;
+    using System.Reflection;
     using static System.Diagnostics.Debug;
 
     public class TomlTableToTypedDictionaryConverter : ITomlConverter
@@ -24,9 +25,9 @@
                 $"Ensure '{nameof(TomlTableToDictionaryConverter)}' converter registered before this one.");
 
             var valueType = targetType.GetGenericArguments()[1];
-            var target = (IDictionary)Activator.CreateInstance(targetType);
+            var target = (IDictionary) Activator.CreateInstance(targetType);
 
-            TomlTable table = (TomlTable)value;
+            TomlTable table = (TomlTable) value;
             foreach (var r in table.Rows)
             {
                 target[r.Key] = r.Value.Get(valueType);

@@ -28,7 +28,7 @@
                     propertyLambda.ToString()));
             }
 
-            if (type != propInfo.ReflectedType && !type.IsSubclassOf(propInfo.ReflectedType))
+            if (type != propInfo.PropertyType && !type.IsAssignableFrom(propInfo.PropertyType))
             {
                 throw new ArgumentException(string.Format(
                     "Expresion '{0}' refers to a property that is not from type {1}.",

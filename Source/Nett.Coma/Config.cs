@@ -22,7 +22,7 @@
         public static Config<T> Create<T>(Func<T> createDefault, params string[] filePaths)
             where T : class
         {
-            var sources = filePaths.Select(fp => ConfigSource.CreateFileSource(fp)).ToArray();
+            var sources = filePaths.Select(ConfigSource.CreateFileSource).ToArray();
             var merged = ConfigSource.Merged(sources);
             return Create(createDefault, merged);
         }
@@ -45,7 +45,7 @@
         {
             getter.CheckNotNull(nameof(getter));
 
-            var cfg = this.persistable.Load();
+            var cfg = persistable.Load();
             return getter(cfg);
         }
 
@@ -53,7 +53,7 @@
         {
             getter.CheckNotNull(nameof(getter));
 
-            var cfg = this.persistable.LoadSourcesTable();
+            var cfg = persistable.LoadSourcesTable();
             return (IConfigSource)getter(cfg);
         }
 

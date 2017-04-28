@@ -3,6 +3,7 @@
     using System;
     using System.Collections;
     using System.Collections.Generic;
+    using System.Reflection;
     using System.Linq;
     using Extensions;
 
@@ -48,7 +49,10 @@
 
         public override object Get(Type t)
         {
-            if (t == TableArrayType) { return this; }
+            if (t == TableArrayType)
+            {
+                return this;
+            }
 
             if (t.IsArray)
             {
@@ -68,9 +72,9 @@
                 throw new InvalidOperationException(string.Format("Cannot convert TOML array to '{0}'.", t.FullName));
             }
 
-            var collection = (IList)Activator.CreateInstance(t);
+            var collection = (IList) Activator.CreateInstance(t);
             Type itemType = ObjectType;
-            if (t.IsGenericType)
+            if (t.GetTypeInfo().IsGenericType)
             {
                 itemType = t.GetGenericArguments()[0];
             }
